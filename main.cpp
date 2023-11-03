@@ -1,5 +1,5 @@
 #include <iostream>
-#define N 8
+#define N 10
 
 int main() {
     int chessboard[N][N], allsteps[8], horsesteps[8][2];
@@ -13,22 +13,14 @@ int main() {
         }
     }
     chessboard[x0][y0] = 1;
-    horsesteps[0][0] = 2;
-    horsesteps[0][1] = 1; 
-    horsesteps[1][0] = 2;
-    horsesteps[1][1] = -1;
-    horsesteps[2][0] = 1;
-    horsesteps[2][1] = 2;
-    horsesteps[3][0] = 1;
-    horsesteps[3][1] = -2;
-    horsesteps[4][0] = -1;
-    horsesteps[4][1] = 2;
-    horsesteps[5][0] = -1;
-    horsesteps[5][1] = -2;
-    horsesteps[6][0] = -2;
-    horsesteps[6][1] = 1;
-    horsesteps[7][0] = -2;
-    horsesteps[7][1] = -1;
+    horsesteps[0][0] = -1; horsesteps[0][1] = 2;
+    horsesteps[1][0] = 1;  horsesteps[1][1] = 2;
+    horsesteps[2][0] = 2;  horsesteps[2][1] = 1;
+    horsesteps[3][0] = -2; horsesteps[3][1] = 1;
+    horsesteps[4][0] = 2;  horsesteps[4][1] = -1;
+    horsesteps[5][0] = -2; horsesteps[5][1] = -1;
+    horsesteps[6][0] = 1;  horsesteps[6][1] = -2;
+    horsesteps[7][0] = -1; horsesteps[7][1] = -2;
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
