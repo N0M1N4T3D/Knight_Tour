@@ -14,7 +14,7 @@ int main() {
     }
     chessboard[x0][y0] = 1;
     horsesteps[0][0] = 2;
-    horsesteps[0][1] = 1; //все возможные ходы коня
+    horsesteps[0][1] = 1; 
     horsesteps[1][0] = 2;
     horsesteps[1][1] = -1;
     horsesteps[2][0] = 1;
@@ -30,12 +30,12 @@ int main() {
     horsesteps[7][0] = -2;
     horsesteps[7][1] = -1;
 
-    for (int i = 0; i < N; i++) { // заполняем шахматную доску нулями
+    for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             chessboard[i][j] = 0;
         }
     }
-    chessboard[x0][y0] = count; // ставим начало
+    chessboard[x0][y0] = count;
     while (true) {
         for (int i = 0; i < 8; i++) {
             if (x0 + horsesteps[i][0] < 0 || x0 + horsesteps[i][0] >= N || y0 + horsesteps[i][1] < 0 ||
